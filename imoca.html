@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Histoire de la course au large</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>La course au large</h1>
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="histoire.html">Histoire</a>
+      <a href="imoca.html">Imoca</a>
+      <a href="ultims.html">Ultims</a>
+      <a href="navigateurs.html">Navigateurs</a>
+	  <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+ <main>
+  <section>
+    <h2>Les Imoca</h2>
+
+    <h3>Qu'est-ce qu'un Imoca ?</h3>
+    <p>
+      Les Imoca sont des voiliers de course utilisés en solitaire pour des courses océaniques.
+      Ils mesurent 60 pieds (environ 18 mètres) et sont conçus pour résister à des conditions difficiles.
+    </p>
+
+    <p>
+      Ils sont construits en fibre de carbone et en alliages légers pour être rapides et solides.
+    </p>
+
+    <h3>Leur apparition</h3>
+    <p>
+      Les Imoca apparaissent au début des années 1990. À l’origine, les règles étaient très libres,
+      on parlait de classe « open ».
+    </p>
+
+    <p>
+      Depuis 2010, les règles garantissent la sécurité et l’équité entre les bateaux.
+      Les foils permettent aux Imoca de voler au-dessus de l’eau.
+    </p>
+
+    <ul>
+      <li>Création de la classe Imoca : 1991</li>
+      <li>Généralisation du carbone : 2008</li>
+      <li>Premiers Imoca à foils : 2015</li>
+    </ul>
+	
+	<h3>Galerie Imoca</h3>
+
+<div class="carousel" data-carousel>
+  <button class="carousel-btn prev" data-prev aria-label="Image précédente">‹</button>
+
+  <div class="carousel-track" data-track>
+    <img src="images_imoca/imoca1.png" alt="Imoca 1">
+    <img src="images_imoca/imoca2.jpg" alt="Imoca 2">
+    <img src="images_imoca/imoca3.jpg" alt="Imoca 3">
+    <img src="images_imoca/imoca4.jpg" alt="Imoca 4">
+    <img src="images_imoca/imoca5.jpeg" alt="Imoca 5">
+    <img src="images_imoca/imoca6.jpeg" alt="Imoca 6">
+  </div>
+
+  <button class="carousel-btn next" data-next aria-label="Image suivante">›</button>
+</div>
+
+	
+  </section>
+</main>
+ 
+
+  <footer>
+    <p>Site réalisé en SNT – 2026</p>
+  </footer>
+
+<script>
+  const carousel = document.querySelector('[data-carousel]');
+  const track = carousel.querySelector('[data-track]');
+  const slides = track.querySelectorAll('img');
+  const prevBtn = carousel.querySelector('[data-prev]');
+  const nextBtn = carousel.querySelector('[data-next]');
+
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  // auto-défilement toutes les 5 secondes
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+</script>
+
+</body>
+</html>
