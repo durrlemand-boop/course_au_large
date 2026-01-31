@@ -1,0 +1,294 @@
+body {
+  font-family: arial, sans-serif;
+  background-color: #eef6ff;
+  margin: 0;
+}
+
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.header-bar nav {
+  grid-column: 2;
+  text-align: center;
+}
+
+.header-bar form.search {
+  grid-column: 3;
+  justify-self: end;
+
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  max-width: none;
+}
+
+.header-bar form.search input {
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+
+.header-bar form.search button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: #003366;
+  padding: 0;
+}
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+section h2 {
+  color: #003366;
+  text-align: center;
+}
+
+section p {
+  text-align: left;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  color: #003366;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #003366;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carte {
+  margin: 0;
+  background: #003366;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #d6e6ff;
+}
+
+.carte img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.carte figcaption {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.carte figcaption a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.carte figcaption a:hover {
+  text-decoration: underline;
+}
+.galeriependuick {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.carte {
+  margin: 0;
+  background: #003366;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #d6e6ff;
+}
+
+.carte img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.carte figcaption {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.carte figcaption a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.carte figcaption a:hover {
+  text-decoration: underline;
+}
+.bloc-courses {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.texte-courses {
+  flex: 1;
+}
+
+.texte-courses ul {
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.images_courses {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.images_courses img {
+  width: 100%;
+  max-width: calc(100% / 3);
+  border-radius: 10px;
+  object-fit: cover;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 12px;
+  border: 1px solid #d6e6ff;
+  background: #003366;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  flex:0 0 100%;
+  width: 100%;              
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 40px;
+  background: rgba(255,255,255,0.85);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.citation {
+	font-style: italic;
+	text-align: center;
+	margin-top: 30px;
+	color: #003366;
+	font-size: 22px;
+}
+.banniere {
+  max-width: 800px;
+  margin: 20px auto;
+}
+.banniere img {
+  width: 100%;
+  height: 250px;
+object-fit: cover;
+}
+
+
+
